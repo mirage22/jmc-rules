@@ -47,7 +47,7 @@ import org.openjdk.jmc.flightrecorder.rules.Result;
 import org.openjdk.jmc.flightrecorder.rules.util.JfrRuleTopics;
 
 public class ExceptionThrowingRule implements IRule {
-	private static final String EXCEPTION_TRHOWING_RULE_ID = "Throwing Exception from the ExceptionThrowingRule"; //$NON-NLS-1$
+	private static final String EXCEPTION_TRHOWING_RULE_ID = "jmc5767.ExceptionThrowingRule"; //$NON-NLS-1$
 
 	private static final List<TypedPreference<?>> CONFIG_ATTRIBUTES = Collections.emptyList();
 
@@ -56,7 +56,7 @@ public class ExceptionThrowingRule implements IRule {
 		FutureTask<Result> evaluationTask = new FutureTask<>(new Callable<Result>() {
 			@Override
 			public Result call() throws Exception {
-				throw new RuntimeException(EXCEPTION_TRHOWING_RULE_ID);
+				throw new RuntimeException("Throwing Exception from the ExceptionThrowingRule");
 			}
 		});
 		return evaluationTask;
