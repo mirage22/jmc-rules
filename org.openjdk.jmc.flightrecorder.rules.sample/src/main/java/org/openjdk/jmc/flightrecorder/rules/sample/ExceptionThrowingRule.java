@@ -46,8 +46,8 @@ import org.openjdk.jmc.flightrecorder.rules.IRule;
 import org.openjdk.jmc.flightrecorder.rules.Result;
 import org.openjdk.jmc.flightrecorder.rules.util.JfrRuleTopics;
 
-public class SampleRule implements IRule {
-	private static final String SAMPLE_RESULT_ID = "SampleRule"; //$NON-NLS-1$
+public class ExceptionThrowingRule implements IRule {
+	private static final String EXCEPTION_TRHOWING_RULE_ID = "Throwing Exception from the ExceptionThrowingRule"; //$NON-NLS-1$
 
 	private static final List<TypedPreference<?>> CONFIG_ATTRIBUTES = Collections.emptyList();
 
@@ -56,8 +56,7 @@ public class SampleRule implements IRule {
 		FutureTask<Result> evaluationTask = new FutureTask<>(new Callable<Result>() {
 			@Override
 			public Result call() throws Exception {
-				throw new RuntimeException(String.format("SampelRule Failed: %s",items));
-				//return getResult(items, valueProvider);
+				throw new RuntimeException(String.format("Throwing Exception from the ExceptionThrowingRule: %s",items));
 			}
 		});
 		return evaluationTask;
@@ -70,7 +69,7 @@ public class SampleRule implements IRule {
 
 	@Override
 	public String getId() {
-		return SAMPLE_RESULT_ID;
+		return EXCEPTION_TRHOWING_RULE_ID;
 	}
 
 	@Override
