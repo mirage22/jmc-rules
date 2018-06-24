@@ -74,7 +74,7 @@ public class ExceptionThrowingRule implements IRule {
 
 	@Override
 	public String getName() {
-		return "SampleRule Throw Exception";
+		return "ExceptionThrowingRule";
 	}
 
 	@Override
