@@ -30,7 +30,7 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
  * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.openjdk.jmc.flightrecorder.rules.sample;
+package org.openjdk.jmc.flightrecorder.rules.jmc5767;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -56,7 +56,7 @@ public class ExceptionThrowingRule implements IRule {
 		FutureTask<Result> evaluationTask = new FutureTask<>(new Callable<Result>() {
 			@Override
 			public Result call() throws Exception {
-				throw new RuntimeException(String.format("Throwing Exception from the ExceptionThrowingRule: %s",items));
+				throw new RuntimeException(EXCEPTION_TRHOWING_RULE_ID);
 			}
 		});
 		return evaluationTask;

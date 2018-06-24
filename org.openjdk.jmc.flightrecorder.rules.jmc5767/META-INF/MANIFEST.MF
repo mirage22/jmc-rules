@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Rules Sample
-Bundle-SymbolicName: org.openjdk.jmc.flightrecorder.rules.sample;singleton:=true
+Bundle-SymbolicName: org.openjdk.jmc.flightrecorder.rules.jmc5767;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.openjdk.jmc.common;visibility:=reexport,
   org.openjdk.jmc.flightrecorder,
  org.openjdk.jmc.flightrecorder.rules;bundle-version="7.0.0",
  org.openjdk.jmc.flightrecorder.rules.jdk;bundle-version="7.0.0"
-Automatic-Module-Name: org.openjdk.jmc.flightrecorder.rules.sample
+Automatic-Module-Name: org.openjdk.jmc.flightrecorder.rules.jmc5767
 Bundle-Vendor: Oracle Corporation
